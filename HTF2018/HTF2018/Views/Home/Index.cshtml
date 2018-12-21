@@ -1,11 +1,11 @@
-﻿@model Domain.Response
+﻿@model Dictionary<string, Domain.ChallengeStatus>
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>HTF 2018 - Pim & Tim</h1>
 <button asp-action="Index" asp-controller="Home">Run Challenges</button>
-@foreach (var challenge in @Model.Overview)
+@foreach (var challenge in @Model)
 {
     <h4>@challenge.Key</h4>
     <p>@challenge.Value.Status</p>

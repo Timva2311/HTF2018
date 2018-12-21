@@ -23,7 +23,7 @@ namespace BL
 
         public void ExecuteAllChallenges()
         {
-            var codes = _api.GetChallengeCodes().Overview.Values.Select(v => v.Entry.Substring(38)).Skip(1).ToArray();
+            var codes = _api.GetChallengeCodes().Overview.Values.Skip(1).Select(v => v.Entry.Substring(37)).ToArray();
             for (int i = 2; i < codes.Length; i++)
             {
                 var challenge = _api.RequestChallenge(codes[i - 2]);

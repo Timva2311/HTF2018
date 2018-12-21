@@ -31,7 +31,7 @@ namespace Domain.Challenges
         }
     }
 
-    public class CalculatePrimeNumbers: BaseClass
+    public class CalculatePrimeNumbers
     {
         public int CalculatePrimes(int begin, int end)
         {

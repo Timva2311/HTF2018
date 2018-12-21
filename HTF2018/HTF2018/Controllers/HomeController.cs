@@ -11,9 +11,17 @@ namespace HTF2018.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ChallengeService _challengeService;
+
+        public HomeController()
+        {
+            _challengeService = new ChallengeService(new HackTheFutureApi());
+        }
         public IActionResult Index()
         {
-            var test = new HackTheFutureApi().GetChallengeCodes();
+            
+            _challengeService.ExecuteAllChallenges();
+            var test = _challengeService.GetAllStates();
             return View(test);
         }
 

@@ -56,7 +56,8 @@ namespace BL
 
             request.AddHeader("htf-identification", GetChallengeCodes().Identification);
 
-            return _client.Execute<Challenge>(request).Data;
+            var response = _client.Execute<Challenge>(request);
+            return response.Data;
         }
 
         public Response PostChallenge(string code, Answer answer)

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CoreCLR-NCalc" Version="2.2.51" />
     <PackageReference Include="RestSharp" Version="106.5.4" />
   </ItemGroup>
 

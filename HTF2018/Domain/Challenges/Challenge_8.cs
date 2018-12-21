@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using NCalc;
 
 namespace Domain.Challenges
 {
@@ -9,11 +11,11 @@ namespace Domain.Challenges
             String input = "";
             foreach (var i in inputValues)
             {
-                input += i.name;
-                input += i.data;
+                input += i.Name;
+                input += i.Data;
             }
             Expression e = new Expression(input);
-            InputValue.Data = e.Evaluate();
+            InputValue.Data = e.Evaluate().ToString();
             InputValue.Name = "answer";
             AnswerList.Add(InputValue);
             InputValue.Data = ;
