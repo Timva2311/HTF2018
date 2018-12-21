@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTF2018", "HTF2018\HTF2018.csproj", "{4CC57A52-0F5E-4DD9-8297-8916EF7293F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{22B93484-57D3-42E3-8E6D-E0CFDB7AA723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E089CA55-31A5-4FB6-8EA5-8229CDECD029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4CC57A52-0F5E-4DD9-8297-8916EF7293F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC57A52-0F5E-4DD9-8297-8916EF7293F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC57A52-0F5E-4DD9-8297-8916EF7293F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B93484-57D3-42E3-8E6D-E0CFDB7AA723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B93484-57D3-42E3-8E6D-E0CFDB7AA723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B93484-57D3-42E3-8E6D-E0CFDB7AA723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B93484-57D3-42E3-8E6D-E0CFDB7AA723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E089CA55-31A5-4FB6-8EA5-8229CDECD029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E089CA55-31A5-4FB6-8EA5-8229CDECD029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E089CA55-31A5-4FB6-8EA5-8229CDECD029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E089CA55-31A5-4FB6-8EA5-8229CDECD029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
