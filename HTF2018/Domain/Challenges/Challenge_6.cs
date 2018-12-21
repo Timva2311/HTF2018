@@ -8,24 +8,26 @@ namespace Domain.Challenges
     {
         public string Challenge6(IEnumerable<InputValue> inputValues)
         {
-            var startDate;
-            var endDate;
-            var day;
+            string startDate;
+            string endDate;
+            string day;
             foreach(var i in inputValues) {
-                switch(i.name) 
+                switch(i.Name) 
                 {
                     case "startDate":
-                        startDate = i.data;
+                        startDate = i.Data;
                         break;
                     case "endDate":
-                        endDate = i.data;
+                        endDate = i.Data;
                         break;
                     case "day":
-                        day = i.data;
+                        day = i.Data;
                         break;
                 }
 
             }
+
+            return null;
         }
     }
 
@@ -40,10 +42,10 @@ namespace Domain.Challenges
             if (sinceLastDay < 0) sinceLastDay += 7;
 
             if (remainder >= sinceLastDay) count++;
-            inputValue.name = "count";
-            inputValue.data = count.ToString();
-            answerlist.Add(inputValue);
-            return answerlist;
+            InputValue.Name = "count";
+            InputValue.Data = count.ToString();
+            Answerlist.Add(InputValue);
+            return Answerlist;
         }
     }
 }

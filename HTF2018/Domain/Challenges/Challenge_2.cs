@@ -10,12 +10,12 @@ namespace Domain.Challenges
             int sum = 0;
             foreach (var i in inputValues)
             {
-                sum += Int32.Parse(i.data);
+                sum += Int32.Parse(i.Data);
             }
-            inputValue.data = sum.ToString();
-            inputValue.name = "sum";
-            answerlist.Add(inputValue);
-            return answerlist;
+            InputValue.Data = sum.ToString();
+            InputValue.Name = "sum";
+            Answerlist.Add(InputValue);
+            return Answerlist;
         }
     }
 }

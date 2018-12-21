@@ -9,7 +9,7 @@ namespace Domain.Challenges
         {
             AtbashCipher atbash = new AtbashCipher();
             var input = inputValues.FirstOrDefault();
-            return atbash.Decode(input.data);
+            return atbash.Decode(input.Data);
         }
     }
 
@@ -21,7 +21,7 @@ namespace Domain.Challenges
             {
                 var ctr = 0;
 
-                for (i = 2; i <= num / 2; i++)
+                for (int i = 2; i <= num / 2; i++)
                 {
                     if (num % i == 0)
                     {
@@ -32,12 +32,12 @@ namespace Domain.Challenges
 
                 if (ctr == 0 && num != 1)
                 {
-                    inputValue.data = num.ToString();
-                    inputValue.name = "prime";
-                    answerlist.Add(inputValue);
+                    InputValue.Data = num.ToString();
+                    InputValue.Name = "prime";
+                    Answerlist.Add(InputValue);
                 }
             }
-            return answerlist;
+            return Answerlist;
         }
     }
 }

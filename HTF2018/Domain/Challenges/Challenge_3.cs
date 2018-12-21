@@ -10,10 +10,10 @@ namespace Domain.Challenges
         {
             AtbashCipher atbash = new AtbashCipher();
             var input = inputValues.FirstOrDefault();
-            inputValue.data = atbash.Decode(input.data);
-            inputValue.name = "decoded";
-            answerlist.Add(inputValue);
-            return answerlist;
+            InputValue.Data = atbash.Decode(input.Data);
+            InputValue.Name = "decoded";
+            Answerlist.Add(InputValue);
+            return Answerlist;
         }
     }
 

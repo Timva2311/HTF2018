@@ -4,7 +4,7 @@ namespace Domain.Challenges
 {
     public class BaseClass
     {
-        public IList<InputValue> answerlist;
-        public InputValue inputValue;
+        public IList<InputValue> Answerlist;
+        public InputValue InputValue;
     }
 }

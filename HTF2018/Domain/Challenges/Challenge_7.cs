@@ -8,15 +8,17 @@ namespace Domain.Challenges
         {
             foreach (var i in inputValues)
             {
-                switch (i.name)
+                switch (i.Name)
                 {
                     case "number":
-                        answerlist.Add(i);
-                        return answerlist;
+                        Answerlist.Add(i);
+                        return Answerlist;
                     default:
                         break;
                 }
             }
+
+            return Answerlist;
         }
     }
 }
