@@ -27,13 +27,15 @@ namespace BL
             for (int i = 2; i < codes.Length; i++)
             {
                 var challenge = _api.RequestChallenge(codes[i - 2]);
-                var answerValues = GetChallenge(i).Execute(challenge.Question.InputValues);
+                var executer = GetChallenge(i);
+                if(executer == null || challenge == null) continue;
+                var answerValues = executer.Execute(challenge.Question.InputValues);
                 _api.PostChallenge(codes[i - 2], new Answer()
                 {
                     ChallengeId = challenge.Id,
                     Values = answerValues.ToList()
                 });
-                Thread.Sleep(1000);
+                Thread.Sleep(1100);
             }
         }
 

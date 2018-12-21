@@ -17,11 +17,11 @@ namespace Domain.Challenges
             Expression e = new Expression(input);
             InputValue.Data = e.Evaluate().ToString();
             InputValue.Name = "answer";
-            AnswerList.Add(InputValue);
-            InputValue.Data = ;
+            Answerlist.Add(InputValue);
+            InputValue.Data = null;
             InputValue.Name = "answer";
-            AnswerList.Add(InputValue);
-            return AnswerList;
+            Answerlist.Add(InputValue);
+            return Answerlist;
         }
     }
 }

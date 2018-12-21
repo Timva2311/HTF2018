@@ -4,13 +4,13 @@ namespace Domain.Challenges
 {
     public abstract class BaseClass
     {
-        public List<InputValue> AnswerList;
+        public List<InputValue> Answerlist;
         public InputValue InputValue;
         public abstract IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues);
 
         public BaseClass()
         {
-            AnswerList = new List<InputValue>();
+            Answerlist = new List<InputValue>();
             InputValue = new InputValue();
         }
     }
