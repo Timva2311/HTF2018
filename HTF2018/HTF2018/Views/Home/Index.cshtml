@@ -1,6 +1,8 @@
-﻿@{
+﻿@model Domain.Response
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>HTF 2018 - Pim & Tim</h1>
-<button asp-action="RunChallenges">Run Challenges</button>
+<button asp-action="Index" asp-controller="Home">Run Challenges</button>
+<p>@Model.ToString()</p>

@@ -6,6 +6,6 @@ namespace Domain
 {
     public class Question
     {
-        public List<InputValue> inputValues { get; set; }
+        public List<InputValue> InputValues { get; set; }
     }
 }

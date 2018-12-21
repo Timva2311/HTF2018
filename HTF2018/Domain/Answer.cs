@@ -6,7 +6,7 @@ namespace Domain
 {
     public class Answer
     {
-        public string challengeId { get; set; }
-        public List<InputValue> values { get; set; }
+        public string ChallengeId { get; set; }
+        public List<InputValue> Values { get; set; }
     }
 }
