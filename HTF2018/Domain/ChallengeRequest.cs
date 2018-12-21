@@ -4,11 +4,11 @@ namespace Domain
 {
     public class ChallengeRequest
     {
-            public string id { get; set; }
-            public string identifier { get; set; }
-            public string title { get; set; }
-            public string description { get; set; }
-            public Question question { get; set; }
+            public string Id { get; set; }
+            public string Identifier { get; set; }
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public Question Question { get; set; }
 
     }
 }

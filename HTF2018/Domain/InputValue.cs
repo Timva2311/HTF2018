@@ -6,7 +6,7 @@ namespace Domain
 {
     public class InputValue
     {
-        public string name { get; set; }
-        public string data { get; set; }
+        public string Name { get; set; }
+        public string Data { get; set; }
     }
 }
