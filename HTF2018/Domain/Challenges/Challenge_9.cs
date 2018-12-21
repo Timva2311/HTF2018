@@ -11,14 +11,14 @@ namespace Domain.Challenges
                 switch (i.Name)
                 {
                     case "number":
-                        Answerlist.Add(i);
-                        return Answerlist;
+                        AnswerList.Add(i);
+                        return AnswerList;
                     default:
                         break;
                 }
             }
 
-            return Answerlist;
+            return AnswerList;
         }
     }
 }
