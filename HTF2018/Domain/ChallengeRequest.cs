@@ -9,7 +9,6 @@ namespace Domain
             public string title { get; set; }
             public string description { get; set; }
             public Question question { get; set; }
-            public Example example { get; set; }
 
     }
 }
