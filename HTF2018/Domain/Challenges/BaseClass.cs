@@ -7,5 +7,11 @@ namespace Domain.Challenges
         public IList<InputValue> Answerlist;
         public InputValue InputValue;
         public abstract IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues);
+
+        public BaseClass()
+        {
+            Answerlist = new IList<InputValue>();
+            InputValue = new InputValue();
+        }
     }
 }
