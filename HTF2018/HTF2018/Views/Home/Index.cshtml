@@ -5,4 +5,8 @@
 
 <h1>HTF 2018 - Pim & Tim</h1>
 <button asp-action="Index" asp-controller="Home">Run Challenges</button>
-<p>@Model.ToString()</p>
+@foreach (var challenge in @Model.Overview)
+{
+    <h4>@challenge.Key</h4>
+    <p>@challenge.Value.Status</p>
+}

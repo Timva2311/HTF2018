@@ -2,9 +2,10 @@
 
 namespace Domain.Challenges
 {
-    public class BaseClass
+    public abstract class BaseClass
     {
         public IList<InputValue> Answerlist;
         public InputValue InputValue;
+        public abstract IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues);
     }
 }

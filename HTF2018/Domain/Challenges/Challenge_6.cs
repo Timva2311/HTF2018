@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Domain.Challenges
 {
-    public class Challenge_6: BaseClass
+    public class Challenge_6 : BaseClass
     {
-        public IEnumerable<InputValue> Challenge6(IEnumerable<InputValue> inputValues)
+        public override IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues)
         {
             DateTime startDate = DateTime.Now;
             DateTime endDate = DateTime.Now;
