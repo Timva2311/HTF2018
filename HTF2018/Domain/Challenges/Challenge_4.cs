@@ -1,21 +1,39 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Domain.Challenges
 {
-    public class Challenge_4
+    public class Challenge_4: BaseClass
     {
-        public string Challenge4(IEnumerable<InputValue> inputValues)
+        public IEnumerable<InputValue> Challenge4(IEnumerable<InputValue> inputValues)
         {
             AtbashCipher atbash = new AtbashCipher();
-            var input = inputValues.FirstOrDefault();
-            return atbash.Decode(input.Data);
+            CalculatePrimeNumbers calculate = new CalculatePrimeNumbers();
+            int start = 0;
+            int end = 0;
+            foreach (var i in inputValues)
+            {
+                switch (i.Name)
+                {
+                    case "start":
+                        start = Int32.Parse(i.Data);
+                        break;
+                    case "end":
+                        end = Int32.Parse(i.Data);
+                        break;
+                }
+            }
+            InputValue.Data = (calculate.CalculatePrimes(start, end)).ToString();
+            InputValue.Name = "prime";
+            Answerlist.Add(InputValue);
+            return Answerlist;
         }
     }
 
     public class CalculatePrimeNumbers: BaseClass
     {
-        public IEnumerable<InputValue> CalculatePrimes(int begin, int end)
+        public int CalculatePrimes(int begin, int end)
         {
             for (int num = begin; num <= end; num++)
             {
@@ -32,12 +50,10 @@ namespace Domain.Challenges
 
                 if (ctr == 0 && num != 1)
                 {
-                    InputValue.Data = num.ToString();
-                    InputValue.Name = "prime";
-                    Answerlist.Add(InputValue);
+                    return num;
                 }
             }
-            return Answerlist;
+            return 0;
         }
     }
 }
