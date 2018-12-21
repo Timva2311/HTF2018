@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Domain.Challenges
 {
-    public class Challenge_4
+    public class Challenge_4 : BaseClass
     {
         public string Challenge4(IEnumerable<InputValue> inputValues)
         {

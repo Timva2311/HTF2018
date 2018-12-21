@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Domain.Challenges
 {
-    public class Challenge_6
+    public class Challenge_6 : BaseClass
     {
-        public string Challenge6(IEnumerable<InputValue> inputValues)
+        public override IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues)
         {
             string startDate;
             string endDate;
@@ -31,7 +31,7 @@ namespace Domain.Challenges
         }
     }
 
-    public class CountDay: BaseClass
+    public class CountDay
     {
         public IEnumerable<InputValue> CountDayInPeriod(DayOfWeek day, DateTime start, DateTime end)
         {
