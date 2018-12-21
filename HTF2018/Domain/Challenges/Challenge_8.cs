@@ -18,8 +18,8 @@ namespace Domain.Challenges
             InputValue.Data = e.Evaluate().ToString();
             InputValue.Name = "answer";
             AnswerList.Add(InputValue);
-            InputValue.Data = ;
-            InputValue.Name = "answer";
+            InputValue.Data = input;
+            InputValue.Name = "formula";
             AnswerList.Add(InputValue);
             return AnswerList;
         }

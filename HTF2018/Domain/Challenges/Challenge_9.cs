@@ -2,23 +2,23 @@
 
 namespace Domain.Challenges
 {
-    public class Challenge_7: BaseClass
+    public class Challenge_9: BaseClass
     {
-        public IEnumerable<InputValue> Challenge7(IEnumerable<InputValue> inputValues)
+        public override IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues)
         {
             foreach (var i in inputValues)
             {
                 switch (i.Name)
                 {
                     case "number":
-                        Answerlist.Add(i);
-                        return Answerlist;
+                        AnswerList.Add(i);
+                        return AnswerList;
                     default:
                         break;
                 }
             }
 
-            return Answerlist;
+            return AnswerList;
         }
     }
 }

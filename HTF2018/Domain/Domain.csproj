@@ -11,8 +11,6 @@
     <Compile Remove="Challenges\AtbashCipher.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="NCalc">
-      <HintPath>..\..\..\..\..\.nuget\packages\coreclr-ncalc\2.2.51\lib\netstandard2.0\NCalc.dll</HintPath>
-    </Reference>
+    <PackageReference Include="CoreCLR-NCalc" Version="2.2.51" />
   </ItemGroup>
 </Project>
