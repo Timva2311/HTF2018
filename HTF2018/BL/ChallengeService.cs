@@ -23,8 +23,18 @@ namespace BL
 
         public void ExecuteAllChallenges()
         {
-            var codes = _api.GetChallengeCodes().Overview.Values.Select(v => v.Entry.Substring(38));
-            
+            var codes = _api.GetChallengeCodes().Overview.Values.Select(v => v.Entry.Substring(38)).Skip(1).ToArray();
+            for (int i = 2; i < codes.Length; i++)
+            {
+                var challenge = _api.RequestChallenge(codes[i - 2]);
+                var answerValues = GetChallenge(i).Execute(challenge.Question.InputValues);
+                _api.PostChallenge(codes[i - 2], new Answer()
+                {
+                    ChallengeId = challenge.Id,
+                    Values = answerValues.ToList()
+                });
+                Thread.Sleep(1000);
+            }
         }
 
         private BaseClass GetChallenge(int x)

@@ -6,7 +6,7 @@ namespace Domain.Challenges
 {
     public class Challenge_4: BaseClass
     {
-        public IEnumerable<InputValue> Challenge4(IEnumerable<InputValue> inputValues)
+        public override IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues)
         {
             AtbashCipher atbash = new AtbashCipher();
             CalculatePrimeNumbers calculate = new CalculatePrimeNumbers();

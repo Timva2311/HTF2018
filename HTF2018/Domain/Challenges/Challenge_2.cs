@@ -5,7 +5,7 @@ namespace Domain.Challenges
 {
     public class Challenge_2: BaseClass
     {
-        public IEnumerable<InputValue> Challenge2(IEnumerable<InputValue> inputValues)
+        public override IEnumerable<InputValue> Execute(IEnumerable<InputValue> inputValues)
         {
             int sum = 0;
             foreach (var i in inputValues)
