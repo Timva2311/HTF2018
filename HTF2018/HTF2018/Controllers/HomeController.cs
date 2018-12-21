@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using BL;
 using Microsoft.AspNetCore.Mvc;
 using HTF2018.Models;
 
@@ -12,7 +13,8 @@ namespace HTF2018.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var test = new HackTheFutureApi().GetChallengeCodes();
+            return View(test);
         }
 
         public IActionResult About()
@@ -38,11 +40,6 @@ namespace HTF2018.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        public IActionResult RunChallenges()
-        {
-            return Ok();
         }
     }
 }
